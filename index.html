@@ -314,7 +314,7 @@
         case '+':
           return value1 + value2;
         case '-':
-          return value1 - value2;
+          return value2 - value1;
         case '^':
           return Math.pow(value2,value1);
         case 'x':
@@ -322,7 +322,7 @@
         case '&divide;':
           return value2 / value1;
         case 'mod':
-            return value1%value2;
+            return value2%value1;
         case 'fact':
             return factorial(value1);
         case 'abs':
