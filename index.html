@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shimron calculator</title>
+    <!--
+        The tailwind CDN is designed for development purposes only, and is not the best choice for production.
+        Read more here: https://tailwindcss.com/docs/installation 
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- example for dark theme styling when using tailwind cdn -->
+    <style>
+        /*examples for dark/light themes*/
+        .dark .dark\:text-white {
+            color: #fff;
+        }
+        .dark .dark\:bg-gray-800 {
+            background-color: #1f2937;
+        }
+        .light .light\:text-black {
+            color: #000;
+        }
+        body {
+            display: flex;
+            justify-content: center; /* Center along the horizontal axis */
+            align-items: center; /* Center along the vertical axis */
+            height: 100vh; /* 100% of the viewport height */
+            margin: 0; /* Remove default margin to avoid unwanted spacing */
+        }
+
+        .centered-div {
+            width: 480x; /* Adjust the width as needed */
+            height: 380x; /* Adjust the height as needed */
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow for better visibility */
+        }
+        
+
+        .Blue-button {
+            width: 80px; /* Set a fixed width for circular buttons */
+            height: 40px; /* Set a fixed height for circular buttons */
+            border-radius: 10%; /* Make buttons circular */
+            border: 2px  ; /* Add a transparent border */
+            background-color: rgb(102, 172, 252);
+            text-align: center;
+            font-weight: bold; /* Make the font bold */
+            color: white; /* Set the font color to white */
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 2px;
+            margin-bottom: 2px;
+            margin-left: 2px;
+            margin-top: 2px;
+            border-color: rgb(93, 165, 248)
+            transition: border-color 0.3s ease; /* Add a smooth transition for the border color */
+        }
+
+        .Blue-button:hover {
+            border-color: rgb(75, 153, 243); /* Change border color on hover */
+            background-color: rgb(82, 160, 250);
+        }
+
+        .button {
+            width: 80px; /* Set a fixed width for circular buttons */
+            height: 40px; /* Set a fixed height for circular buttons */
+            border-radius: 10%; /* Make buttons circular */
+            border: 2px  ; /* Add a transparent border */
+            background-color: #f7f7f7;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 2px;
+            margin-bottom: 2px;
+            margin-left: 2px;
+            margin-top: 2px;
+            border-color: rgb(68, 67, 67)
+            transition: border-color 0.3s ease; /* Add a smooth transition for the border color */
+        }
+
+        .button:hover {
+            border-color: rgb(238, 232, 232); /* Change border color on hover */
+            background-color: #ebe8e8;
+        }
+
+        .display {
+            height: 50px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            border: 1px solid #3846ff;
+            display: flex;
+            align-items: left;
+            justify-content: flex-end;
+            padding: 10px;
+            font-size: 20px;
+            margin: auto; /* Center the display horizontally */
+            margin-bottom: 10px;
+            max-width: 380px; /* Limit the width for better visibility */
+        }
+
+        
+
+    </style>
+</head>
+
+<body class="dark:text-white light:text-black">
+
+    <div class = centered-div>
+        <div class="display" id="display">0</div>
+        <div>
+            <button class="button">(</button>
+            <button class="button">)</button>
+            <button class="button">%</button>
+            <button class="button">CE</button>
+        </div>
+    
+        <div>
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button">&divide</button>
+        </div>
+    
+        <div>
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">x</button>
+        </div>
+    
+        <div>
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">-</button>
+        </div>
+    
+        <div>
+            <button class="button">0</button>
+            <button class="button">.</button>
+            <button class="Blue-button dark:text-white">=</button>
+            <button class="button">+</button>
+        </div>
+    </div>
+
+    <!-- special scripts for integration in MTW gallery - must be placed at the bottom of the HTML after your code -->
+    <script>
+        // custom config for the MTW app 
+        const mtwAppConfig = {
+            border: true // app border in the MTW page                    
+        }
+
+        ///////////////////////////////////////////////////////
+        // implement this functions in order to use private API        
+        const sendPrivateApiRequest = async () => {
+            // your code here:
+            // sendRequestToParent({ cat: 'getAssets' })
+        }        
+
+        const acceptPrivateApiResponse = async (data) => {
+            // process received data here:
+            // console.log(data)
+        }
+
+        // use this in order to send on document load
+        document.addEventListener('DOMContentLoaded', () => {
+            // your code here:
+            //sendRequestToParent({ method: 'getAssets' })
+        })
+
+    </script>
+    <script src="https://morethanwallet.com/appstore/index.js"></script>
+</body>
+
+</html>
